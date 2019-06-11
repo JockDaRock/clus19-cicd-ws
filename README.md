@@ -15,7 +15,7 @@ Gogs `https://f7c68928.ngrok.io/`
 https://github.com/CiscoDevNet/cicd-idpw-sample-code
 ```
 
-* Next we will activate our repo.  Follow along with the instructor to activate the repo.
+* Next we will activate our repo.  Follow along with the instructor to activate the repo and drone connection.
 
 * Login to Fog Director with creds... User: `admin` Password: `admin_123`
 
@@ -40,10 +40,42 @@ From here on out we will work in the web based code editor and terminal.
 * In the that terminal window, import our codebase with the following command.
 
 ```bash
-git clone https://f7c68928.ngrok.io/cicd-user1/idpw-user1
+git clone https://f7c68928.ngrok.io/cicd-user<#>/idpw-user<#>
 ```
 
-* Now follow the instructor above to edit our CICD pipeline code.
+* Now follow the instructor above to edit our CICD pipeline code and repository information for the pipeline build.
+
+...
+...
+...
+...
+...
+
+* On the terminal window change directories into our code repo folder
+
+```
+cd idpw-user<#>
+```
+
+* Use git to add our user name and e-mail
+
+```
+git config --global user.email cicd-user<#>@devnet.org
+
+git config --global user.name cicd-user<#>
+```
+
+* Run the following commands to push up our code.
+
+```
+git add --all
+
+git commit -m "CICD Let's GO!!!"
+
+git push origin master
+```
+
+* Go back to then drone tab in your browser and view the build.
 
 If you want to give it another try after this workshop... visit the online DevNet Learning Lab for CICD w/ IOx apps.
 
